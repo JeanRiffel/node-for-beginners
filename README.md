@@ -1,39 +1,59 @@
-# node-examples
+# Node-examples
 
 Esse repositório é para estudos dos principais pontos a respeito do NodeJS.
 
 
-### Principais comandos
+Exemplo de principais comandos:
 
-
+```
 - npm init:  criar o arquivo package.json
 
-- npm install nodemon --save   --save-dev 
+- npm install nodemon  
+    --save       ->parâmetro como dependência de aplicação 
+    --save-dev   ->parâmetro como dependência de dev
 
 - npm remove nodemon 
 
-- npm install
+- npm install ->executa todas dependências que existentes no package.json
 
-- *diretório node_modules
+- *diretório node_modules deve ser colocado no .gitignore 
+ 
+``` 
 
-- colocar no .gitignore 
+### Pacotes úteis.
 
-### Não bloqueie o event loop 
+- [Reiniciar a aplicação a cada vez que é salva alguma alteração](https://www.npmjs.com/package/nodemon)  npm install nodemon --save-dev
 
-[Não bloqueie event loop](https://nodejs.org/pt-br/docs/guides/dont-block-the-event-loop/ )
+- [Parsear request ](https://www.npmjs.com/package/body-parser) 
+npm install body-parser --save
+
+- [Manipular datas no javascript](https://momentjs.com/) npm install moment --save
+
+- [Agendamento de jobs](https://www.npmjs.com/package/cron) npm i cron
+
+- [Framework para construir API](https://expressjs.com/) npm install express --save
+
+- [Axios Http cliente para requisições](https://www.npmjs.com/package/axios) npm i axios --save
+
+## Sugestão de conteúdos  
 
 
-### Operações sincronas com NodeJS.
+#### Não bloqueie o event loop 
 
-[Gerenciando fluxo assincrono](
+- [Não bloqueie event loop](https://nodejs.org/pt-br/docs/guides/dont-block-the-event-loop/ )
+
+
+#### Operações sincronas com NodeJS.
+
+- [Gerenciando fluxo assincrono](
 https://imasters.com.br/desenvolvimento/gerenciando-o-fluxo-assincrono-de-operacoes-em-nodejs)
 
-[Como escrever código assincrono](
+- [Como escrever código assincrono](
 https://www.digitalocean.com/community/tutorials/how-to-write-asynchronous-code-in-node-js-pt
 )
 
-[Evolução do nodeJS assincrono](https://medium.com/@felipemonobe/evolucao-assincrono-nodejs-p1-7fe46450425b)
+- [Evolução do nodeJS assincrono](https://medium.com/@felipemonobe/evolucao-assincrono-nodejs-p1-7fe46450425b)
 
-[Programação assincrona com NodeJS](
+- [Programação assincrona com NodeJS](
 https://www.devmedia.com.br/programacao-assincrona-com-node-js/31509
 )

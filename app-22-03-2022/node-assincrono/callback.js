@@ -1,17 +1,21 @@
+/*
+    Exemplo usando callback
+*/
+
 const obterIDUsuario = ()=>{
     console.log('ID Usuário', 100);    
     return 100;    
 }
 
-const consultarDadosUsuario = (idUsuario)=>{
-    
-    console.log('consultando dados usuário');
-    const dados = {
+const consultarDadosUsuario = (idUsuario, callback )=>{
+    setTimeout( ()=>{ 
+        console.log('consultando dados usuário');
+        const dados = {
             idUsuario,
-            nome : 'joão',
+            nome : 'jean',
             idade : 30}
-    
-    return dados;    
+        callback(dados);            
+    }, 6000);            
 };
 
 const ehMaiorIdade = (dadosUsuario )=>{
@@ -28,9 +32,8 @@ const ehMaiorIdade = (dadosUsuario )=>{
 }
 
 const main =  ()=>{
-    const idUsuario = obterIDUsuario();    
-    const dadosUsuario =consultarDadosUsuario(idUsuario);
-    ehMaiorIdade(dadosUsuario);
+    const idUsuario = obterIDUsuario();
+    consultarDadosUsuario(idUsuario, ehMaiorIdade );
 }
 
 main();

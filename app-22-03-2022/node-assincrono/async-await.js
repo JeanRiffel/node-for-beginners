@@ -3,15 +3,17 @@ const obterIDUsuario = ()=>{
     return 100;    
 }
 
-const consultarDadosUsuario = (idUsuario)=>{
-    
-    console.log('consultando dados usuário');
-    const dados = {
-            idUsuario,
-            nome : 'joão',
-            idade : 30}
-    
-    return dados;    
+const consultarDadosUsuario = (idUsuario )=>{
+    return new Promise ( (resolve, reject )=>{
+        setTimeout( ()=>{ 
+            console.log('consultando dados usuário');
+            const dados = {
+                idUsuario,
+                nome : 'jean',
+                idade : 30}
+            resolve(dados);
+        }, 6000);            
+    } );
 };
 
 const ehMaiorIdade = (dadosUsuario )=>{
@@ -27,9 +29,9 @@ const ehMaiorIdade = (dadosUsuario )=>{
     }
 }
 
-const main =  ()=>{
+const main = async ()=>{
     const idUsuario = obterIDUsuario();    
-    const dadosUsuario =consultarDadosUsuario(idUsuario);
+    const dadosUsuario = await consultarDadosUsuario(idUsuario)
     ehMaiorIdade(dadosUsuario);
 }
 
