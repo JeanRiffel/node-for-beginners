@@ -1,0 +1,17 @@
+{
+  "name": "teste_jean",
+  "version": "1.0.0",
+  "description": "projeto de teste",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "jean riffel",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.2"
+  }
+}
