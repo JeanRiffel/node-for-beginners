@@ -89,7 +89,7 @@ https://www.devmedia.com.br/programacao-assincrona-com-node-js/31509
 
 #### Canais no youtube ####
 
-- [Rocketseat] (https://www.youtube.com/channel/UCSfwM5u0Kce6Cce8_S72olg)
+- [Rocketseat](https://www.youtube.com/channel/UCSfwM5u0Kce6Cce8_S72olg)
 
 - [Erick Wendel](https://www.youtube.com/c/ErickWendelTreinamentos)
 
