@@ -4,7 +4,7 @@
 
 Here I want to share my knowledge which I have acquired through my own studies, whether is useful for you please feel free for using it.
 
-[PT] Este repo é para estudos de tópicos do NodeJS que todo desenvolverdor deve dominar.
+[PT] Este repo é para estudos de tópicos do NodeJS que todo desenvolvedor deve dominar.
 
 Aqui desejo compartilhar meus conhecimentos que tenho obtido, se for útil para você por favor sinta-se a vontade para usar o conteúdo.
 
