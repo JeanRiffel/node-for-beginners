@@ -1,9 +1,20 @@
 # Node-examples
 
-Esse repositório é para estudos dos principais pontos a respeito do NodeJS.
+[EN] This repo is or studying topics about NodeJS that every developer must know.
 
+Here I want to share my knowledge which I have acquired through my own studies, whether is useful for you please feel free for using it.
 
-Exemplo de principais comandos:
+[PT] Este repo é para estudos de tópicos do NodeJS que todo desenvolverdor deve dominar.
+
+Aqui desejo compartilhar meus conhecimentos que tenho obtido, se for útil para você por favor sinta-se a vontade para usar o conteúdo.
+
+<code><img height="20" src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"></code>
+<code><img height="20" src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white"></code>
+<code><img height="20" src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"></code>
+_________________________
+
+[EN] The main commands for starting a new app on NodeJS.
+[PT] Principais comandos para inciar um app NodeJs.
 
 ```
 - npm init:  criar o arquivo package.json
@@ -20,7 +31,8 @@ Exemplo de principais comandos:
  
 ``` 
 
-### Pacotes úteis.
+### Useful packages for studying.
+
 
 - [Reiniciar a aplicação a cada vez que é salva alguma alteração](https://www.npmjs.com/package/nodemon)  npm install nodemon --save-dev
 
