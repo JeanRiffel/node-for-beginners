@@ -49,7 +49,7 @@ npm install body-parser --save
 
 - [Oracle](https://www.npmjs.com/package/oracledb)
 
-- [JWT](https://www.npmjs.com/package/express-jwt)
+- [For authentication JWT](https://www.npmjs.com/package/express-jwt)
 
 ## Sugestão de conteúdos para estudos
 
