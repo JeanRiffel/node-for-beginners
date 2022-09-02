@@ -1,31 +1,30 @@
-const name = 'jean';        // const variáveis que não alteram o valor
-let   name2 = 'jean';       // let variáveis que alteram valor
+const fatherName = 'John';  // with const you can't change the const value during the execution code
+let   motherName = 'Mary';  // with let you are allowed to modify the value during the execution code
+var  cousinName = 'Bob';    // var is old fashion approach for declaring variable, please use one of the previous options.
 
-const idade = 60;           // inteiro
-const peso = 155.60;        // decimal
-
-const ehAzul = true;        // boolean
-
-const data = Date();
+//variables in JS do not use data types
+const age = 60;        // might be integer
+const price = 155.60;  // might be decimal
+const isBlue = true;   // might be boolean
+const data = Date();   // is kind of new object
 
 /*
-    funções no estilo arrow function
-    JS permite passar funções como parâmetro
+    the new feature of ES6 is called array function    
 */  
-const primeiraFuncao = (valor, funcao)=>{
-    console.log('impressão da primeira função ');
-    funcao(valor);    
+const printFirstValue = (value, functionParameter)=>{
+    console.log('printing the value using printFirstValue-> ', value);
+    functionParameter(value);    
 }
 
-const segundaFuncao = (valor)=>{
-    console.log('imprimindo valor passado para segunda função' , valor);
+const printSecondValue = (value)=>{
+    console.log('printing the first value using the printSecondValue-> ' , value);
 }
 
 const main = ()=>{
     console.log('Hello world');
 
-    //chamar primeira funcao, chamando a segunda função como parâmetro
-    primeiraFuncao(100, segundaFuncao);
+    //functions in JS are objects, so you can pass it as a parameter
+    printFirstValue(100, printSecondValue);
 }
 
 main();
