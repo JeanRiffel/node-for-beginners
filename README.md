@@ -1,96 +1,91 @@
 # Node-examples
 
-[EN] This repo is or studying topics about NodeJS that every developer must know.
+This repo is for studying topics about NodeJS that every developer should know.
 
-Here I want to share my knowledge which I have acquired through my own studies, whether is useful for you please feel free for using it.
-
-[PT] Este repo é para estudos de tópicos do NodeJS que todo desenvolvedor deve dominar.
-
-Aqui desejo compartilhar meus conhecimentos que tenho obtido, se for útil para você por favor sinta-se a vontade para usar o conteúdo.
+Here I want to share my knowledge I have acquired through my own studies, whether is useful for you please feel free for using it.
 
 <code><img height="20" src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"></code>
 <code><img height="20" src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white"></code>
 <code><img height="20" src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E"></code>
 _________________________
 
-[EN] The main commands for starting a new app on NodeJS.
-[PT] Principais comandos para inciar um app NodeJs.
+The main commands for starting a new app on NodeJS.
 
 ```
-- npm init:  criar o arquivo package.json
+- npm init:  it will create the config file called package.json
 
 - npm install nodemon  
-    --save       ->parâmetro como dependência de aplicação 
-    --save-dev   ->parâmetro como dependência de dev
+    --save       -> parameter for setting applications dependencies.
+    --save-dev   -> parameter for setting developer dependencies ( which only the developer will use for developing, is not necessary for running the app :) )
 
 - npm remove nodemon 
 
-- npm install ->executa todas dependências que existentes no package.json
+- npm install -> it will install all dependencies set in the file package.json
 
-- *diretório node_modules deve ser colocado no .gitignore 
+- *place the folder node_modules into .gitignore because you can install all dependencies using npm install command.
  
 ``` 
 
 ### Useful packages for studying.
 
 
-- [Reiniciar a aplicação a cada vez que é salva alguma alteração](https://www.npmjs.com/package/nodemon)  npm install nodemon --save-dev
+- [Restart the app when some changing is made](https://www.npmjs.com/package/nodemon)  npm install nodemon --save-dev
 
 - [Parsear request ](https://www.npmjs.com/package/body-parser)
 npm install body-parser --save
 
-- [Manipular datas no javascript](https://momentjs.com/) npm install moment --save
+- [Manipulating format dates in an easy way](https://momentjs.com/) npm install moment --save
 
-- [Agendamento de jobs](https://www.npmjs.com/package/cron) npm i cron
+- [Scheduling jobs](https://www.npmjs.com/package/cron) npm i cron
 
-- [Framework para construir API](https://expressjs.com/) npm install express --save
+- [Framework for building API](https://expressjs.com/) npm install express --save
 
-- [Axios Http cliente para requisições assincronas](https://www.npmjs.com/package/axios) npm i axios --save
+- [Axios Http client to make requests](https://www.npmjs.com/package/axios) npm i axios --save
 
-- [Oracle](https://www.npmjs.com/package/oracledb)
+- [Oracle package](https://www.npmjs.com/package/oracledb)
 
 - [For authentication JWT](https://www.npmjs.com/package/express-jwt)
 
-## Sugestão de conteúdos para estudos
+## Content for studying
 
 
-#### Não bloqueie o event loop 
+#### Don't block the event loop
 
-- [Não bloqueie event loop](https://nodejs.org/pt-br/docs/guides/dont-block-the-event-loop/ )
+- [Please, do not block the event loop :)](https://nodejs.org/pt-br/docs/guides/dont-block-the-event-loop/ )
 
 
-#### Operações sincronas com NodeJS.
+#### Sync and Async approach in NodeJS.
 
-- [Gerenciando fluxo assincrono](
+- [PT][Gerenciando fluxo assincrono](
 https://imasters.com.br/desenvolvimento/gerenciando-o-fluxo-assincrono-de-operacoes-em-nodejs)
 
-- [Como escrever código assincrono](
+- [How to write asynchronous code](
 https://www.digitalocean.com/community/tutorials/how-to-write-asynchronous-code-in-node-js-pt
 )
 
-- [Evolução do nodeJS assincrono](https://medium.com/@felipemonobe/evolucao-assincrono-nodejs-p1-7fe46450425b)
+- [PT][Evolução do nodeJS assincrono](https://medium.com/@felipemonobe/evolucao-assincrono-nodejs-p1-7fe46450425b)
 
-- [Programação assincrona com NodeJS](
+- [PT][Programação assincrona com NodeJS](
 https://www.devmedia.com.br/programacao-assincrona-com-node-js/31509
 )
 
-- [Async / Await Simples e Descomplicado no JavaScript - Youtube](https://www.youtube.com/watch?v=h0sNAXE1ozo)
+- [PT][Async / Await Simples e Descomplicado no JavaScript - Youtube](https://www.youtube.com/watch?v=h0sNAXE1ozo)
 
-- [Desvendando Definitivamente as Promises em JavaScript - Youtube](https://www.youtube.com/watch?v=nRJhc6vXyK4)
+- [PT][Desvendando Definitivamente as Promises em JavaScript - Youtube](https://www.youtube.com/watch?v=nRJhc6vXyK4)
 
-- [Callback - Youtube ](https://www.youtube.com/watch?v=zUtqTM6_-PM)
+- [PT][Callback - Youtube ](https://www.youtube.com/watch?v=zUtqTM6_-PM)
 
-- [JS Assíncrono: Entenda de vez Callbacks, Promises e Async/Await - Youtube](https://www.youtube.com/watch?v=7Bs4-rqbCQc)
+- [PT][JS Assíncrono: Entenda de vez Callbacks, Promises e Async/Await - Youtube](https://www.youtube.com/watch?v=7Bs4-rqbCQc)
 
-#### Pacote JWT Geração de Token ####
+#### Generating Tokens with JWT ####
 
 - [JWT](https://jwt.io/)
 
-- [Como o JWT Funciona](https://www.devmedia.com.br/como-o-jwt-funciona/40265)
+- [PT][Como o JWT Funciona](https://www.devmedia.com.br/como-o-jwt-funciona/40265)
 
-- [O que é JWT? Aprenda tudo sobre o JSON Web Token - Youtube](https://www.youtube.com/watch?v=sHyoMWnnLGU)
+- [PT][O que é JWT? Aprenda tudo sobre o JSON Web Token - Youtube](https://www.youtube.com/watch?v=sHyoMWnnLGU)
 
-#### Acesso Oracle (Oficial) ####
+#### Accessing Oracle (Oficial) ####
 
 - [Oracle Node.Js Developer Center](https://developer.oracle.com/br/nodejs/ )
 
@@ -99,19 +94,19 @@ https://www.devmedia.com.br/programacao-assincrona-com-node-js/31509
 - [Documentação node-oracledb](https://oracle.github.io/node-oracledb/doc/api.html)
 
 
-#### Canais no youtube ####
+#### YouTube channels ####
 
-- [Rocketseat](https://www.youtube.com/channel/UCSfwM5u0Kce6Cce8_S72olg)
+- [PT][Rocketseat](https://www.youtube.com/channel/UCSfwM5u0Kce6Cce8_S72olg)
 
-- [Erick Wendel](https://www.youtube.com/c/ErickWendelTreinamentos)
+- [PT][Erick Wendel](https://www.youtube.com/c/ErickWendelTreinamentos)
 
-- [Filipe Deschamps](https://www.youtube.com/c/FilipeDeschamps)
+- [PT][Filipe Deschamps](https://www.youtube.com/c/FilipeDeschamps)
 
-- [Mango](https://www.youtube.com/c/MangoDeveloper)
+- [PT][Mango](https://www.youtube.com/c/MangoDeveloper)
 
-- [Rodrigo Brannas](https://www.youtube.com/c/RodrigoBranas)
+- [PT][Rodrigo Brannas](https://www.youtube.com/c/RodrigoBranas)
 
-#### Em Inglês ####
+#### In English ####
 
 - [NodeJS - The Complete Guide (MVC, REST APIs, GraphQL, Deno)](https://www.udemy.com/course/nodejs-the-complete-guide/)
 
