@@ -1,17 +1,15 @@
 {
-  "name": "teste_jean",
+  "name": "first_app",
   "version": "1.0.0",
-  "description": "projeto de teste",
+  "description": "first_app_project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "start:nodemon": "nodemon index.js"
   },
   "author": "jean riffel",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.15"
-  },
-  "dependencies": {
-    "body-parser": "^1.19.2"
   }
 }
