@@ -1,19 +1,19 @@
-const obterIDUsuario = ()=>{
-    console.log('ID Usuário', 100);    
+const getUserId = ()=>{
+    console.log('User Id', 100);    
     return 100;    
 }
 
-const consultarDadosUsuario = (idUsuario )=>{    
+const getUserData = (userId )=>{    
     return new Promise( (resolve, reject) =>{
         try{ 
             setTimeout( ()=>{
-                console.log('consultando dados usuário 1');
-                const dados = {
-                        idUsuario,
-                        nome : 'jean',
-                        idade : 30}        
+                console.log('Getting user data');
+                const data = {
+                        userId,
+                        name : 'john',
+                        age : 30}        
                 
-                resolve(dados);                
+                resolve(data);                
             }, 3000);
         
         }catch(error){
@@ -22,32 +22,25 @@ const consultarDadosUsuario = (idUsuario )=>{
     });
 };
 
-const ehMaiorIdade = (dadosUsuario )=>{      
-    
-    if (!dadosUsuario){ console.log('não tem dados para idade'); return }
-
-    if (dadosUsuario.idade >= 18){
-        console.log('eh maior de idade ');
-        return true ;
-    }else
-    if (dadosUsuario.idade < 18){
-        console.log('não eh maior de idade');    
-    }
+const isOfAge = (userData)=>{    
+    if (!userData){ return false; }
+    return userData.age >= 18 ? true : false;
 }
 
 const main = async ()=>{
-    const idUsuario = obterIDUsuario();    
+    const userId = getUserId();    
 
-    await consultarDadosUsuario(idUsuario)
-        .then( ( dadosUsuario )=>{
-            ehMaiorIdade(dadosUsuario);
-
+    await getUserData(userId)
+        .then( ( userData )=>{
+            if(isOfAge(userData)){
+                console.log('Is Of Age');
+            }else{
+                console.log('Is not Of Age');
+            }
         })
         .catch( (error)=>{
-            console.log('Aconteceu um erro', error );
-        });
-    //const dadosUsuario = await consultarDadosUsuario(idUsuario);
-    //ehMaiorIdade(dadosUsuario);
+            console.log('Found error ', error );
+        }); 
 }
 
 main();
