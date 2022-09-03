@@ -2,38 +2,39 @@
     Exemplo usando callback
 */
 
-const obterIDUsuario = ()=>{
-    console.log('ID Usuário', 100);    
+const getUserId = ()=>{
+    console.log('User Id', 100);    
     return 100;    
 }
 
-const consultarDadosUsuario = (idUsuario, callback )=>{
+const getUserData = (userId, callback )=>{
     setTimeout( ()=>{ 
-        console.log('consultando dados usuário');
-        const dados = {
-            idUsuario,
-            nome : 'jean',
-            idade : 30}
-        callback(dados);            
-    }, 6000);            
+        console.log('getting user data');
+        const data = {
+            userId,
+            name : 'john',
+            age : 30}
+        callback(data);            
+    }, 3000);            
 };
 
-const ehMaiorIdade = (dadosUsuario )=>{
-    if (!dadosUsuario){ console.log('não tem dados para idade'); return }
-    if (!dadosUsuario.idUsuario){ console.log('não encontrado idUsuario no objeto'); return }
+const isOfAge = ( userData )=>{
+    if (!userData){ console.log('data not found'); return false;}
+    if (!userData.userId){ console.log('userId not found'); return false; }
 
-    if (dadosUsuario.idade >= 18){
-        console.log('eh maior de idade ');
+    if (userData.age >= 18){
+        console.log('is of Age');
         return true ;
     }else
-    if (dadosUsuario.idade < 18){
-        console.log('não eh maior de idade');    
+    if (userData.age < 18){
+        console.log('is not of Age');    
+        return false;
     }
 }
 
 const main =  ()=>{
-    const idUsuario = obterIDUsuario();
-    consultarDadosUsuario(idUsuario, ehMaiorIdade );
+    const userId = getUserId();
+    getUserData(userId, isOfAge );
 }
 
 main();
