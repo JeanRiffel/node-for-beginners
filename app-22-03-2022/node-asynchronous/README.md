@@ -1,14 +1,19 @@
-# Exemplo de execução
+# Show the basic about NodeJS
 
-    - sincrona
+# First Step
+
+- Run the command `npm install` , it will install all dependencies.
+
+# Files
+    - synchronous
     - callback
     - async-await
     - promises
  
- ### comandos e arquivos para executar
-
- - node sincrono.js 
- - node callback.js
- - node async-await.js 
- - node promises-.js 
+ ### commads for execution
+ 
+ - `npm run synchronous`
+ - `npm run callback`
+ - `npm run async-await`
+ - `npm run promises`
  
