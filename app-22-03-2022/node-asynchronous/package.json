@@ -1,12 +1,11 @@
 {
   "name": "node-asynchronous",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "",  
   "scripts": {    
     "async-await" : "node async-await.js",    
     "callback" : "node callback.js",
-    "synchronous" : "node asynchronous.js",
+    "synchronous" : "node synchronous.js",
     "promises" : "node promises.js"
   },
   "keywords": [],
