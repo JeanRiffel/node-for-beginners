@@ -1,36 +1,41 @@
-const obterIDUsuario = ()=>{
-    console.log('ID Usuário', 100);    
+const getUserId = ()=>{
+    console.log('User ID is ', 100);    
     return 100;    
-}
-
-const consultarDadosUsuario = (idUsuario)=>{
-    
-    console.log('consultando dados usuário');
-    const dados = {
-            idUsuario,
-            nome : 'joão',
-            idade : 30}
-    
-    return dados;    
 };
 
-const ehMaiorIdade = (dadosUsuario )=>{
-    if (!dadosUsuario){ console.log('não tem dados para idade'); return }
-    if (!dadosUsuario.idUsuario){ console.log('não encontrado idUsuario no objeto'); return }
+const getUserData = (userId)=>{    
+    console.log('Querying the ser data');
+    const userData = {
+            userId,
+            name: 'John',
+            age: 30
+        };
+    
+    return userData;    
+};
 
-    if (dadosUsuario.idade >= 18){
-        console.log('eh maior de idade ');
+const isOfAge = (userData)=>{
+    if (!userData) { 
+        console.log('Age data not found'); 
+        return;
+    }
+    if (!userData.userId) { 
+        console.log('UserId not found'); 
+        return;
+    }
+
+    if (userData.age >= 18) {
+        console.log('The user is of age');
         return true ;
-    }else
-    if (dadosUsuario.idade < 18){
-        console.log('não eh maior de idade');    
+    }else if (userData.age < 18) {
+        console.log('The user is not of age');    
     }
 }
 
 const main =  ()=>{
-    const idUsuario = obterIDUsuario();    
-    const dadosUsuario =consultarDadosUsuario(idUsuario);
-    ehMaiorIdade(dadosUsuario);
+    const userId = getUserId();    
+    const userData = getUserData(userId);
+    isOfAge(userData);
 }
 
 main();
