@@ -1,0 +1,30 @@
+{
+    "data":[
+        {
+            "id":1,
+            "firstName":"John",
+            "secondName":"River",
+            "age":60,
+            "birthday":"1990-05-06",
+            "street":"Mary Jane"
+        },
+        {
+            "id":2,
+            "firstName":"Joanne",
+            "secondName":"Saint",
+            "age":25,
+            "birthday":"1995-04-25",
+            "street":"Saint Peter Square"
+        },
+        {
+            "id":3,
+            "firstName":"Peter",
+            "secondName":"Jacboson",
+            "age":31,
+            "birthday":"1996-10-25",
+            "street":"Atlantic Way"
+        }
+    ]
+}
+    
+    
