@@ -1,4 +1,4 @@
-# Mais exemplos
+# More Examples
 
-node sincrono.js 
-node assincrono.js 
+node asynchronous.js 
+node synchronous.js 
