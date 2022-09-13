@@ -1,34 +1,34 @@
 const express = require('express');
 const server = express();
-const porta = 3000;
+const port = 3000;
 
-server.get('/api/v1/cliente', ( req, res )=>{
-    console.log('olá mundo cliente');
+server.get('/api/v1/customer', (req, res)=>{
+    console.log('hello world :) ');
 
-    const objeto = {
-        empresa : 'Loghaus',
-        cnpj : '2222222222',
-        endereco : 'Rua Werner Duwe 202'
+    const data = {
+        company: 'Sky Dreams',
+        registration_number: '06845465465',
+        address: 'Heaven street'
     }
 
-    res.json( objeto);
+    res.json(data);
 });
 
-server.get('/api/v1/cliente/cliente/:idCliente', ( req, res )=>{
-    const idCliente = req.params.idCliente;
-    console.log('olá mundo cliente id ',idCliente );
+server.get('/api/v1/customer/:customerId', (req, res)=>{
+    const customerId = req.params.customerId;
+    console.log('customer Id ', customerId);
 
-    const objeto = {
-        idCliente,
-        status : 'nova consulta',
-        empresa : 'Loghaus',
-        cnpj : '2222222222',
-        endereco : 'Rua Werner 202'
+    const data = {
+        customerId,
+        status : 'new query',
+        company: 'Sky Dreams',
+        registration_number: '06845465465',
+        address: 'Heaven street'
     }
 
-    res.json( objeto);
+    res.json(data);
 });
 
-server.listen( porta ,  ()=>{
-    console.log('Servidor esta rodando');
-} )
+server.listen(port, ()=>{
+    console.log('Hey, server is running!');
+});
