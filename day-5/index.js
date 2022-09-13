@@ -1,52 +1,47 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-
-
-const clienteRouter = require('./router/cliente-router');
-
+const customerRoute = require('./router/customerRoute');
 const server = express();
-const porta = 3000;
+const port = 3000;
 
-server.use( bodyParser.urlencoded(  { extended: true} ) );
-server.use( bodyParser.json());
+server.use(bodyParser.urlencoded({extended: true}));
+server.use(bodyParser.json());
 
-server.use( clienteRouter );
+server.use(customerRoute);
 
-const validarAutorizacao = (req, res, next)=>{
+const checkAuthorization = (req, res, next)=>{
     const authorization = req.headers.authorization;
 
-    if( ! authorization ){
-        res.status(401).json('Código de autorização não foi informado' );
+    if (!authorization) {
+        res.status(401).json('Authorization code not found');
         return;
     }
 
-    if(parseInt(authorization) !== 1999 ){
-        res.status(401).json('Código de autorização é inválido' );
+    if (parseInt(authorization) !== 1999) {
+        res.status(401).json('Authorization code is invalid');
         return;
     }
     next();
 }
 
-server.use(validarAutorizacao);
+server.use(checkAuthorization);
 
-
-server.post('/api/v1/cliente',  ( req, res ) =>{
-
+server.post('/api/v1/customer', (req, res) => {
     const body = req.body;
 
-    console.log('Meu nome', body.nome );
-    console.log('Meu endereço', body.idade );
+    console.log('Name: ', body.name);
+    console.log('Address: ', body.age);
 
-    if (! body.idade ){
-        console.log('campo inválido')
+    if (!body.age ){
+        console.log('Age is a invalid field');
     }
     
-    console.log('Corpo da requisição',  body );
-    console.log('agora estou executando post');
+    console.log('Request body', body);
+    console.log('Post executed');
 
-    res.json( body );
+    res.json(body);
 });
 
-server.listen( porta ,  ()=>{    
-    console.log(`Servidor esta rodando ${porta} ` );
-} )
+server.listen(port, ()=> {    
+    console.log(`Server is running ${port}`);
+});
