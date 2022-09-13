@@ -1,67 +1,63 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-
-const dados = require('./data.json');
-
+const data = require('./data.json');
 const server = express();
-const porta = 3000;
+const port = 3000;
 
-server.use( bodyParser.urlencoded(  { extended: true} ) );
-server.use( bodyParser.json());
+server.use(bodyParser.urlencoded({ extended: true}));
+server.use(bodyParser.json());
 
-const validarAutorizacao = (req, res, next)=>{
+const checkAuthorization = (req, res, next)=>{
     const authorization = req.headers.authorization;
 
-    if( ! authorization ){
-        res.status(401).json('Código de autorização não foi informado' );
+    if(!authorization){
+        res.status(401).json('Authorization code is not allowed' );
         return;
     }
 
     if(parseInt(authorization) !== 1999 ){
-        res.status(401).json('Código de autorização é inválido' );
+        res.status(401).json('Authorization is invalid' );
         return;
     }
     next();
 }
 
-server.use(validarAutorizacao);
+server.use(checkAuthorization);
 
-server.get('/api/v1/cliente', ( req, res ) =>{
-    res.json( dados );
+server.get('/api/v1/customer', (req, res) => {
+    res.json(data);
 });
 
-server.post('/api/v1/cliente',  ( req, res ) =>{
-
+server.post('/api/v1/customer', (req, res) =>{
     const body = req.body;
 
-    console.log('Meu nome', body.nome );
-    console.log('Meu endereço', body.idade );
+    console.log('Name: ', body.name);
+    console.log('Address', body.age);
 
-    if (! body.idade ){
-        console.log('campo inválido')
+    if (!body.age) {
+        console.log('Age is a invalid field');
     }
     
-    console.log('Corpo da requisição',  body );
-    console.log('agora estou executando post');
+    console.log('Body request', body);
+    console.log('Post executed');
 
-    res.json( body );
+    res.json(body);
 });
 
-server.get('/api/v1/cliente/:id', ( req, res ) =>{
-    
-    const id = req.params.id;
+server.get('/api/v1/customer/:customerId', ( req, res ) =>{    
+    const customerId = req.params.customerId;
 
-    const resultado = dados.data.filter( elemento =>{
-        return elemento.id.toString() === id;
-    } );
+    const filteredData = data.customers.filter(customer => {
+        return customer.id.toString() === customerId;
+    });
 
-    if(resultado.length === 0){
-        res.status(404).json( { msg : 'sem dados' } );
+    if(filteredData.length === 0){
+        res.status(404).json({ msg: 'Data not found'});
         return;
     }
-    res.json(resultado);
+    res.json(filteredData);
 });
 
-server.listen( porta ,  ()=>{    
-    console.log(`Servidor esta rodando ${porta} `);
-} )
+server.listen(port, ()=>{    
+    console.log(`Server is running ${port}`);
+});
